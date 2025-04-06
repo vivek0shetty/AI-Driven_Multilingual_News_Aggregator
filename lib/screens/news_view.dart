@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_new_application/config/config.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -34,15 +35,14 @@ class _NewsViewState extends State<NewsView> {
       hasError = false;
     });
 
-    // const String apiKey =
-    //     "Add your api key here";
-    // const String apiUrl = "Add your api url here";
+  
+    const String apiUrl = "Add your api url here";
 
     try {
       final response = await http.post(
         Uri.parse(apiUrl),
         headers: {
-          "Authorization": "Bearer $apiKey",
+          "Authorization": "Bearer ${AppConfig.apiKey}",
           "Content-Type": "application/json",
         },
         body: jsonEncode({
@@ -91,15 +91,14 @@ class _NewsViewState extends State<NewsView> {
       hasError = false;
     });
 
-    // const String apiKey =
-    //     "Add your api key here";
-    // const String apiUrl = "Add your api url here";
+
+    const String apiUrl = "Add your api url here";
 
     try {
       final response = await http.post(
         Uri.parse(apiUrl),
         headers: {
-          "Authorization": "Bearer $apiKey",
+          "Authorization": "Bearer ${AppConfig.apiKey}",
           "Content-Type": "application/json",
         },
         body: jsonEncode({
@@ -144,15 +143,13 @@ class _NewsViewState extends State<NewsView> {
       hasError = false;
     });
 
-    // const String apiKey =
-    //     "Add your api key here";
-    // const String apiUrl = "Add your api url here";
+    const String apiUrl = "Add your api url here";
 
     try {
       final response = await http.post(
         Uri.parse(apiUrl),
         headers: {
-          "Authorization": "Bearer $apiKey",
+          "Authorization": "Bearer ${AppConfig.apiKey}",
           "Content-Type": "application/json",
         },
         body: jsonEncode({
